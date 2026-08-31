@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLM Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <div class="logo">DLM</div>
+
+            <h2>Welcome Back</h2>
+
+            <p class="subtitle">
+                Login to Digital Library
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter Username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter Password"
+                        required
+                    >
+                </div>
+
+                <div class="password-rules">
+
+                    <b>Password must contain:</b>
+
+                    <p id="length">✖ Minimum 8 characters</p>
+                    <p id="uppercase">✖ One uppercase letter</p>
+                    <p id="lowercase">✖ One lowercase letter</p>
+                    <p id="number">✖ One number</p>
+                    <p id="special">✖ One special character</p>
+
+                </div>
+
+                <button type="submit" class="btn login-btn">
+                    Login
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <div class="register-link">
+                Don't have an account?
+                <a href="../pages/register.html">Register</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

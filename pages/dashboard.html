@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DLM Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            DLM
+        </div>
+
+        <div class="nav-menu">
+
+            <a href="#" data-page="Dashboard">Dashboard</a>
+            <a href="#" data-page="Books">Books</a>
+            <a href="#" data-page="Members">Members</a>
+            <a href="#" data-page="Issue Book">Issue Book</a>
+            <a href="#" data-page="Return Book">Return Book</a>
+            <a href="#" data-page="Reports">Reports</a>
+            <a href="#" data-page="About">About</a>
+            <a href="../pages/login.html">Logout</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1 id="pageTitle">
+            Dashboard
+        </h1>
+
+        <p id="pageDescription">
+            Welcome to Digital Library Management System
+        </p>
+
+
+        <!-- Summary Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Books</h3>
+                <h2>500</h2>
+                <p>Books available in library</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Total Members</h3>
+                <h2>120</h2>
+                <p>Registered library members</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Issued Books</h3>
+                <h2>75</h2>
+                <p>Books currently issued</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Returned Books</h3>
+                <h2>425</h2>
+                <p>Books successfully returned</p>
+            </div>
+
+        </div>
+
+
+        <!-- Dynamic Content -->
+
+        <div id="contentArea" class="content-area">
+
+            <h2>Library Overview</h2>
+
+            <p>
+                Select an option from the navigation menu
+                to view its details.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
