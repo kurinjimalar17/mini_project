@@ -1,0 +1,74 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book - Digital Library</title>
+    <link rel="stylesheet" href="../css/return.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">📚 Digital Library</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="books.html">Books</a>
+            <a href="members.html">Members</a>
+            <a href="issue.html">Issue Book</a>
+            <a href="return.html" class="active">Return Book</a>
+            <a href="reports.html">Reports</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-heading">
+            <h1>Return Book</h1>
+            <p>Return issued books to the library</p>
+        </div>
+
+        <section class="return-section">
+            <h2>Return Book Details</h2>
+            <p class="description">Select an issued book and confirm its return.</p>
+
+            <form id="returnForm">
+                <label for="issuedBook">Select Issued Book</label>
+                <select id="issuedBook" required>
+                    <option value="">Select an issued book</option>
+                </select>
+
+                <div id="selectedDetails" class="selected-details">
+                    <p><strong>Member:</strong> <span id="memberName">-</span></p>
+                    <p><strong>Book:</strong> <span id="bookName">-</span></p>
+                    <p><strong>Issue Date:</strong> <span id="issueDate">-</span></p>
+                    <p><strong>Return Date:</strong> <span id="dueDate">-</span></p>
+                </div>
+
+                <button type="submit">Confirm Return</button>
+                <p id="message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="return-section">
+            <h2>Return History</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Member Name</th>
+                            <th>Book Name</th>
+                            <th>Issue Date</th>
+                            <th>Return Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="returnTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/return.js"></script>
+</body>
+</html>
+```

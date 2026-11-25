@@ -1,0 +1,99 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Reports</title>
+    <link rel="stylesheet" href="../css/reports.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">📚 Digital Library</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="books.html">Books</a>
+            <a href="members.html">Members</a>
+            <a href="issue.html">Issue Book</a>
+            <a href="return.html">Return Book</a>
+            <a href="reports.html" class="active">Reports</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-heading">
+            <h1>Library Reports</h1>
+            <p>View and manage your library statistics</p>
+        </div>
+
+        <section class="summary-cards">
+            <div class="report-card">
+                <h3>Total Books</h3>
+                <p id="totalBooks">0</p>
+            </div>
+            <div class="report-card">
+                <h3>Total Members</h3>
+                <p id="totalMembers">0</p>
+            </div>
+            <div class="report-card">
+                <h3>Issued Books</h3>
+                <p id="issuedBooks">0</p>
+            </div>
+            <div class="report-card">
+                <h3>Returned Books</h3>
+                <p id="returnedBooks">0</p>
+            </div>
+        </section>
+
+        <section class="report-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Book Inventory Report</h2>
+                    <p>Available books and their quantities</p>
+                </div>
+                <button onclick="window.print()">Print Report</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Book ID</th>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookReport"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="report-section">
+            <h2>Issue and Return Report</h2>
+            <p class="section-description">Track issued and returned books</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Member Name</th>
+                            <th>Book Name</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="issueReport"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/reports.js"></script>
+</body>
+</html>
+```

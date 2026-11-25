@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DLM Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body> 
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        📚 Digital Library
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html" class="active">
+            Dashboard
+        </a>
+
+        <a href="books.html">
+             Books
+        </a>
+
+        <a href="members.html">
+             Members
+        </a>
+
+        <a href="issue.html">
+             Issue Book
+        </a>
+
+        <a href="return.html">
+            Return Book
+        </a>
+
+        <a href="reports.html">
+             Reports
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="login.html">
+             Logout
+        </a>
+
+    </div>
+
+</nav>
+    <main class="main-content">
+
+        <h1 id="pageTitle">
+            Dashboard
+        </h1>
+
+        <p id="pageDescription">
+            Welcome to Digital Library Management System
+        </p>
+
+<cards>
+           <div class="cards">
+            <div class="card">
+
+                <h3>Total Books</h3>
+
+                <h2 id="totalBooks">0</h2>
+                <p>
+                    Books available in library
+                </p>
+            </div>
+
+            <div class="card">
+
+                <h3>Total Members</h3>
+                <h2 id="totalMembers">0</h2>
+                <p>
+                    Registered library members
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Issued Books</h3>
+
+                <h2 id="issuedBooks">0</h2>
+
+                <p>
+                    Books currently issued
+                </p>
+            </div>
+            <div class="card">
+
+                <h3>Returned Books</h3>
+                <h2 id="returnedBooks">0</h2>
+                <p>
+                    Books successfully returned
+                </p>
+            </div>
+        </div>
+
+<!-- Low Stock Alert Section -->
+<div class="low-stock-section">
+    <h2><strong>Low Stock Alert</strong></h2>
+
+    <p>Total Low Stock Books:
+        <span id="lowStockCount">0</span>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Quantity</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="lowStockTable">
+        </tbody>
+    </table>
+</div>
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

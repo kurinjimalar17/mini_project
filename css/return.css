@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.12),rgba(255,255,255,0.12)),url("../images/library-bg.jpg") center/cover fixed no-repeat;
+    color: #102a43;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    background: linear-gradient(135deg,#102a43,#1f4e79);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 11px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+.nav-links a.active {
+    background: rgba(255,255,255,0.22);
+    box-shadow: inset 0 -3px 0 white;
+}
+
+.container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.page-heading {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+.page-heading p {
+    font-size: 15px;
+}
+
+.return-section {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    margin-bottom: 30px;
+}
+
+.return-section h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.description {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#returnForm {
+    max-width: 650px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d5e0ea;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+}
+
+select:focus {
+    border-color: #1f4e79;
+    box-shadow: 0 0 0 3px rgba(31,78,121,0.1);
+}
+
+.selected-details {
+    background: #f5f9fd;
+    border: 1px solid #e1eaf2;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #1f4e79;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #163a5c;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead {
+    background: #1f4e79;
+    color: white;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background: #f5f9fd;
+}
+
+.status-returned {
+    color: #237a45;
+    font-weight: 600;
+}
+
+.status-issued {
+    color: #b7791f;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links a {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 18px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .return-section {
+        padding: 20px;
+    }
+}

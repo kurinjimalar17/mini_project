@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    color: #102a43;
+
+    background-image: url("../images/library-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.navbar {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    background: linear-gradient(135deg, #102a43, #1f4e79);
+
+    color: white;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    padding: 11px 15px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+.nav-links a.active {
+    background: rgba(255,255,255,0.18);
+}
+.books-container {
+    max-width: 1400px;
+    margin: auto;
+
+    padding: 45px;
+}
+.page-heading {
+    margin-bottom: 30px;
+}
+.page-heading p {
+    color: #1f4e79;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+.page-heading h1 {
+    font-size: 34px;
+
+    color: #102a43;
+
+    margin-bottom: 8px;
+}
+.page-heading span {
+    color: #718096;
+
+    font-size: 15px;
+}
+.book-list-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e6edf5;
+
+    box-shadow: 0 8px 25px rgba(15, 40, 70, 0.08);
+
+    margin-bottom: 30px;
+}
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+.section-heading h2 {
+    color: #102a43;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+.section-heading p {
+    color: #829ab1;
+
+    font-size: 14px;
+}
+#showAddBook {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #1f4e79, #2f6f9f);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+#showAddBook:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 15px rgba(31,78,121,0.25);
+}
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+thead th {
+    background: #1f4e79;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+tbody td {
+    padding: 14px;
+
+    border-bottom: 1px solid #e8edf2;
+
+    color: #52606d;
+
+    font-size: 14px;
+}
+tbody tr:hover td {
+    background: #f5f9fd;
+}
+.action-button {
+    padding: 7px 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1f4e79;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+.action-button:hover {
+    background: #102a43;
+}
+.add-book-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e6edf5;
+
+    box-shadow: 0 8px 25px rgba(15, 40, 70, 0.08);
+
+    display: none;
+}
+
+.add-book-section.show {
+    display: block;
+}
+
+
+.form-heading {
+    margin-bottom: 25px;
+}
+
+
+.form-heading h2 {
+    color: #102a43;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+
+.form-heading p {
+    color: #829ab1;
+
+    font-size: 14px;
+}
+#bookForm {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}.input-group {
+    display: flex;
+
+    flex-direction: column;
+}
+.input-group label {
+    margin-bottom: 8px;
+
+    color: #334e68;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+.input-group input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5e0ea;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fbfdff;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.input-group input:focus {
+    border-color: #1f4e79;
+
+    box-shadow: 0 0 0 3px rgba(31,78,121,0.1);
+}
+.book-url {
+    color: #1f4e79;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.book-url:hover {
+    text-decoration: underline;
+}
+/* ================= ERROR MESSAGE ================= */
+
+.error-message {
+    display: none;
+    color: #e65100;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.error-message.show {
+    display: block;
+}
+.error-message {
+    color: #e53e3e;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+    min-height: 16px;
+}
+.form-buttons {
+    grid-column: span 2;
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+.save-button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #1f4e79, #2f6f9f);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+.save-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 15px rgba(31,78,121,0.25);
+}
+.cancel-button {
+    padding: 12px 25px;
+
+    border: 1px solid #d5e0ea;
+
+    border-radius: 8px;
+
+    background: #f8fbff;
+
+    color: #52606d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+.cancel-button:hover {
+    background: #e8f0f7;
+
+    color: #102a43;
+}
+.success-message {
+    grid-column: span 2;
+
+    margin-top: 5px;
+
+    color: #2f855a;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .nav-links a {
+        padding: 9px;
+    }
+
+    .books-container {
+        padding: 30px;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .books-container {
+        padding: 20px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    #bookForm {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        grid-column: span 1;
+
+        flex-direction: column;
+    }
+
+    .success-message {
+        grid-column: span 1;
+    }
+
+}
+.search-container {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: 1px solid #d5e0ea;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fbfdff;
+
+    color: #334e68;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+#searchInput::placeholder {
+    color: #829ab1;
+}
+#searchInput:focus {
+    border-color: #1f4e79;
+
+    box-shadow:
+        0 0 0 3px rgba(31, 78, 121, 0.1);
+}
+
+.edit-button {
+    padding: 7px 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #f0a202;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-right: 5px;
+
+    transition: 0.3s;
+}
+.edit-button:hover {
+    background: #d88900;
+
+    transform: translateY(-1px);
+}
+.delete-button {
+    padding: 7px 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #e53e3e;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+.delete-button:hover {
+    background: #c53030;
+
+    transform: translateY(-1px);
+}
+.edit-button,
+.delete-button {
+    display: inline-block;
+}
+/* ================= VIEW BOOK CARD ================= */
+
+.view-book-section {
+    display: none;
+}
+
+.view-book-section.show {
+    display: block;
+}
+
+.view-book-section {
+    display: none;
+
+    margin-top: 30px;
+}
+
+
+.view-book-section.show {
+    display: block;
+}
+
+
+.view-book-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e6edf5;
+
+    box-shadow:
+        0 8px 25px rgba(15, 40, 70, 0.10);
+}
+
+
+.view-card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e6edf5;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.view-card-header p {
+    color: #1f4e79;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+
+.view-card-header h2 {
+    color: #102a43;
+
+    font-size: 25px;
+}
+
+
+#closeViewBook {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #edf2f7;
+
+    color: #52606d;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#closeViewBook:hover {
+    background: #1f4e79;
+
+    color: white;
+}
+.view-button {
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #1f4e79;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    transition: 0.3s;
+}
+
+.view-button:hover {
+    background: #163a5c;
+
+    transform: translateY(-2px);
+}
+
+/* ================= BOOK DETAILS ================= */
+
+.book-details {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.detail-item {
+    padding: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #f8fbff,
+        #eef5fb
+    );
+
+    border: 1px solid #dce8f3;
+
+    border-radius: 10px;
+}
+
+
+.detail-item span {
+    display: block;
+
+    color: #829ab1;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+
+.detail-item strong {
+    display: block;
+
+    color: #102a43;
+
+    font-size: 16px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .book-details {
+        grid-template-columns: 1fr;
+    }
+
+}

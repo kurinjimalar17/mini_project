@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Library - Members</title>
+
+    <link rel="stylesheet"
+        href="../css/members.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            📚 Digital Library
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="books.html">
+                Books
+            </a>
+
+            <a href="members.html"
+                class="active">
+                 Members
+            </a>
+
+            <a href="issue.html">
+                 Issue Book
+            </a>
+
+            <a href="return.html">
+                Return Book
+            </a>
+
+            <a href="reports.html">
+                 Reports
+            </a>
+
+            <a href="about.html">
+                 About
+            </a>
+
+            <a href="login.html">
+                 Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+
+    <main class="main-container">
+
+        <div class="page-heading">
+
+            <p>📚 Digital Library</p>
+
+            <h1>Member Management</h1>
+
+            <span>
+                Add and manage library members
+            </span>
+
+        </div>
+
+
+        <!-- Member List -->
+
+        <section class="member-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                         Member List
+                    </h2>
+
+                    <p>
+                        View all registered members
+                    </p>
+
+                </div>
+
+                <button id="showMemberForm">
+                    + Add Member
+                </button>
+
+            </div>
+
+
+            <!-- Member Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Member ID</th>
+
+                            <th>Name</th>
+
+                            <th>Department</th>
+
+                            <th>Email</th>
+
+                            <th>Mobile</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="memberTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Add Member Form -->
+
+        <section
+            id="memberFormSection"
+            class="member-form-section">
+
+            <div class="form-header">
+
+                <h2 id="formTitle">
+                    ➕ Add New Member
+                </h2>
+
+                <p id="formSubtitle">
+                    Enter member details
+                </p>
+
+            </div>
+
+
+            <form id="memberForm">
+
+                <!-- Member ID -->
+
+                <label>
+                    Member ID
+                </label>
+
+                <input
+                    type="text"
+                    id="memberId"
+                    placeholder="Enter Member ID">
+
+                <p
+                    id="memberIdError"
+                    class="error">
+                </p>
+
+
+                <!-- Member Name -->
+
+                <label>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="memberName"
+                    placeholder="Enter Member Name">
+
+                <p
+                    id="memberNameError"
+                    class="error">
+                </p>
+
+
+                <!-- Department -->
+
+                <label>
+                    Department
+                </label>
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Enter Department">
+
+                <p
+                    id="departmentError"
+                    class="error">
+                </p>
+
+
+                <!-- Email -->
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="memberEmail"
+                    placeholder="Enter Email">
+
+                <p
+                    id="memberEmailError"
+                    class="error">
+                </p>
+
+
+                <!-- Mobile Number -->
+
+                <label>
+                    Mobile
+                </label>
+
+                <input
+                    type="text"
+                    id="mobile"
+                    placeholder="Enter 10-digit Mobile Number">
+
+                <p
+                    id="mobileError"
+                    class="error">
+                </p>
+
+
+                <!-- Form Buttons -->
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        id="saveMember">
+                        Save Member
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelMember">
+                        Cancel
+                    </button>
+
+                </div>
+
+
+                <!-- Success Message -->
+
+                <p
+                    id="successMessage"
+                    class="success">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="../js/members.js"></script>
+
+</body>
+
+</html>

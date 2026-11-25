@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library - Issue Book</title>
+    <link rel="stylesheet" href="../css/issue.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">📚 Digital Library</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="books.html">Books</a>
+            <a href="members.html">Members</a>
+            <a href="issue.html" class="active">Issue Book</a>
+            <a href="return.html">Return Book</a>
+            <a href="reports.html">Reports</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Issue Book</h1>
+        <p class="subtitle">Issue books to registered members</p>
+
+        <form id="issueForm">
+            <label for="memberName">Member Name</label>
+            <select id="memberName" required>
+                <option value="">Select Member</option>
+            </select>
+
+            <label for="bookName">Book Name</label>
+            <select id="bookName" required>
+                <option value="">Select Book</option>
+            </select>
+
+            <label for="issueDate">Issue Date</label>
+            <input type="date" id="issueDate" required>
+
+            <label for="returnDate">Return Date</label>
+            <input type="date" id="returnDate" required>
+
+            <button type="submit">Issue Book</button>
+            <p id="message"></p>
+        </form>
+
+        <h2>Issued Books</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Member Name</th>
+                        <th>Book Name</th>
+                        <th>Issue Date</th>
+                        <th>Return Date</th>
+                    </tr>
+                </thead>
+                <tbody id="issueTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/issue.js"></script>
+</body>
+</html>
